@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace DesignPatterns\Creational\Singleton;
 
+use LogicException;
+
 final class Singleton
 {
     private static ?Singleton $instance = null;
@@ -25,8 +27,9 @@ final class Singleton
     {
     }
 
-    private function __wakeup()
+    public function __wakeup()
     {
+        throw new LogicException('Cannot unserialize a singleton.');
     }
 
     private function __sleep()
