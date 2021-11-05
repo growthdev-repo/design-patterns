@@ -4,12 +4,14 @@ declare(strict_types=1);
 
 namespace Growthdev\DesignPatterns\Creational\Singleton;
 
-use DesignPatterns\Creational\Singleton\Singleton;
+use Growthdev\DesignPatterns\Creational\Singleton\Singleton;
+use Error;
+use LogicException;
 use PHPUnit\Framework\TestCase;
 
 final class SingletonTest extends TestCase
 {
-  public function testShoudBeTheSameInstanceForTwoObjets(): void
+  public function testShouldBeTheSameInstanceForTwoObjets(): void
   {
     $firstInstance = Singleton::getInstance();
     $secondInstance = SingleTon::getInstance();
@@ -17,14 +19,14 @@ final class SingletonTest extends TestCase
     $this->assertSame($firstInstance, $secondInstance);
   }
 
-  public function testThrowErrorWhenTryToCreateInstance(): void
+  public function testShouldThrowErrorWhenTryToCreateInstance(): void
   {
     $this->expectException(Error::class);
 
     $instance = new Singleton();
   }
 
-  public function testThrowExceptionWhenTryToClone(): void
+  public function testShouldThrowErrorWhenTryToClone(): void
   {
     $this->expectException(Error::class);
 
@@ -32,9 +34,10 @@ final class SingletonTest extends TestCase
     $clone = clone $instance;
   }
 
-  public function testThrowExceptionWhenTryToSerialize(): void
+  public function testShouldThrowExceptionWhenTryToSerialize(): void
   {
-    $this->expectException(Error::class);
+    $this->expectException(LogicException::class);
+    $this->expectExceptionMessage('Cannot serialize a singleton.');
 
     $instance = Singleton::getInstance();
     $serialize = serialize($instance);

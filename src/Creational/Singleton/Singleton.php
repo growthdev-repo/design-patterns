@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace DesignPatterns\Creational\Singleton;
+namespace Growthdev\DesignPatterns\Creational\Singleton;
 
 use LogicException;
 
@@ -23,16 +23,17 @@ final class Singleton
     {
     }
 
-    private function __clone()
+    private function __clone(): void
     {
     }
 
-    public function __wakeup()
+    public function __sleep()
+    {
+        throw new LogicException('Cannot serialize a singleton.');
+    }
+    
+    public function __wakeup(): void
     {
         throw new LogicException('Cannot unserialize a singleton.');
-    }
-
-    private function __sleep()
-    {
     }
 }
