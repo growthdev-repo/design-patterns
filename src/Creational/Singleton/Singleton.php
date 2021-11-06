@@ -6,7 +6,7 @@ namespace Growthdev\DesignPatterns\Creational\Singleton;
 
 use LogicException;
 
-final class Singleton
+class Singleton
 {
     private static ?Singleton $instance = null;
 
