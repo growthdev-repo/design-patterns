@@ -35,4 +35,15 @@ final class MusicalInstrumentFactoryTest extends \PHPUnit\Framework\TestCase
 
         $this->assertInstanceOf(ElectricGuitar::class, $eletricGuitar);
     }
+
+    public function testCanCreateUnknownMusicalInstrument(): void
+    {
+        $this->expectException(\InvalidArgumentException::class);
+
+        $factory = new MusicalInstrumentFactory();
+        $unknownMusicalInstrument = $factory->createMusicalInstrument(
+            'Unknown',
+            'Giannini Model'
+        );
+    }
 }
