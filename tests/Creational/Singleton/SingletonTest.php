@@ -34,14 +34,23 @@ final class SingletonTest extends TestCase
         $clone = clone $instance;
     }
 
-    public function testShouldThrowExceptionWhenTryToUnserialize(): void
+    public function testShouldThrowExceptionWhenTryToSerialize(): void
     {
         $this->expectException(LogicException::class);
-        $this->expectExceptionMessage('Cannot unserialize a singleton.');
+        $this->expectExceptionMessage('Cannot serialize a singleton.');
 
         $instance = Singleton::getInstance();
         $serialize = serialize($instance);
+    }
 
-        $unserialize = unserialize($serialize);
+    public function testShouldThrowExceptionWhenTryToUnserialize(): void
+    {
+        $this->expectException(LogicException::class);
+        //$this->expectExceptionMessage('Cannot unserialize a singleton.');
+
+        $instance = Singleton::getInstance();
+        $serialize = serialize($instance);  // vai cair na exceção do serialize
+
+        $unserialize = unserialize($serialize); // não vai chegar aqui
     }
 }

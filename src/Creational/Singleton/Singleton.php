@@ -27,6 +27,12 @@ class Singleton
     {
     }
     
+    public function __sleep(): array
+    {
+        throw new LogicException('Cannot serialize a singleton.');
+        return [];
+    }
+    
     public function __wakeup(): void
     {
         throw new LogicException('Cannot unserialize a singleton.');
