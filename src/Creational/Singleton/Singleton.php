@@ -13,13 +13,13 @@ final class Singleton
     public static function getInstance(): Singleton
     {
         if (null === static::$instance) {
-            static::$instance = new static();
+            static::$instance = new self();
         }
 
         return static::$instance;
     }
 
-    protected function __construct()
+    private function __construct()
     {
     }
 
@@ -27,9 +27,10 @@ final class Singleton
     {
     }
 
-    public function __sleep()
+    public function __sleep(): array
     {
         throw new LogicException('Cannot serialize a singleton.');
+        return [];
     }
     
     public function __wakeup(): void
