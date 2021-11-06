@@ -26,12 +26,6 @@ class Singleton
     private function __clone(): void
     {
     }
-
-    public function __sleep(): array
-    {
-        throw new LogicException('Cannot serialize a singleton.');
-        return [];
-    }
     
     public function __wakeup(): void
     {

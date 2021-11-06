@@ -11,35 +11,37 @@ use PHPUnit\Framework\TestCase;
 
 final class SingletonTest extends TestCase
 {
-  public function testShouldBeTheSameInstanceForTwoObjets(): void
-  {
-    $firstInstance = Singleton::getInstance();
-    $secondInstance = SingleTon::getInstance();
+    public function testShouldBeTheSameInstanceForTwoObjets(): void
+    {
+        $firstInstance = Singleton::getInstance();
+        $secondInstance = SingleTon::getInstance();
 
-    $this->assertSame($firstInstance, $secondInstance);
-  }
+        $this->assertSame($firstInstance, $secondInstance);
+    }
 
-  public function testShouldThrowErrorWhenTryToCreateInstance(): void
-  {
-    $this->expectException(Error::class);
+    public function testShouldThrowErrorWhenTryToCreateInstance(): void
+    {
+        $this->expectException(Error::class);
 
-    $instance = new Singleton();
-  }
+        $instance = new Singleton();
+    }
 
-  public function testShouldThrowErrorWhenTryToClone(): void
-  {
-    $this->expectException(Error::class);
+    public function testShouldThrowErrorWhenTryToClone(): void
+    {
+        $this->expectException(Error::class);
 
-    $instance = Singleton::getInstance();
-    $clone = clone $instance;
-  }
+        $instance = Singleton::getInstance();
+        $clone = clone $instance;
+    }
 
-  public function testShouldThrowExceptionWhenTryToSerialize(): void
-  {
-    $this->expectException(LogicException::class);
-    $this->expectExceptionMessage('Cannot serialize a singleton.');
+    public function testShouldThrowExceptionWhenTryToUnserialize(): void
+    {
+        $this->expectException(LogicException::class);
+        $this->expectExceptionMessage('Cannot unserialize a singleton.');
 
-    $instance = Singleton::getInstance();
-    $serialize = serialize($instance);
-  }
+        $instance = Singleton::getInstance();
+        $serialize = serialize($instance);
+
+        $unserialize = unserialize($serialize);
+    }
 }
