@@ -6,7 +6,7 @@ namespace Growthdev\DesignPatterns\Creational\Singleton;
 
 use LogicException;
 
-final class Singleton
+class Singleton
 {
     private static ?Singleton $instance = null;
 
@@ -26,7 +26,7 @@ final class Singleton
     private function __clone(): void
     {
     }
-
+    
     public function __sleep(): array
     {
         throw new LogicException('Cannot serialize a singleton.');
