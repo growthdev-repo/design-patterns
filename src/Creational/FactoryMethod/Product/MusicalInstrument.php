@@ -13,7 +13,7 @@ abstract class MusicalInstrument implements MusicalInstrumentProduct
         $this->brand = $brand;
     }
 
-    public function getBrand(): string
+    protected function getBrand(): string
     {
         return $this->brand;
     }
