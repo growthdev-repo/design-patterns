@@ -12,7 +12,12 @@ Casos você queira se aprofundar no tema, não deixe  de conheceu o site Growth 
 - `src/`
     - `Behavioral/`
     - `Creational/`
+    - `Structural/`    
+- `tests/`
+    - `Behavioral/`
+    - `Creational/`
     - `Structural/`
+    
 
 A estrutura da pastas de `tests/` segue a mesma estrutura
 
@@ -36,7 +41,9 @@ Este projetos tem um arquivo `Makefile` para a execução dos testes
 
     `make test`
 
+5. Para executar os testes de uma classe especídica:
 
+    `make test NomeDaClass`
 ## Sobre nós
 
 Este projeto foi desenvoldido por Walmir Silva autor do blog [https://growthdev.com.br](https://growthdev.com.br/)
