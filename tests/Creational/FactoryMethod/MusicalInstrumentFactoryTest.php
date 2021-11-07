@@ -7,8 +7,9 @@ namespace DesignPatterns\Creational\FactoryMethod;
 use Growthdev\DesignPatterns\Creational\FactoryMethod\MusicalInstrumentFactory;
 use Growthdev\DesignPatterns\Creational\FactoryMethod\Product\AcousticGuitar;
 use Growthdev\DesignPatterns\Creational\FactoryMethod\Product\ElectricGuitar;
+use PHPUnit\Framework\TestCase;
 
-final class MusicalInstrumentFactoryTest extends \PHPUnit\Framework\TestCase
+final class MusicalInstrumentFactoryTest extends TestCase
 {
     public function testCanCreateAcousticGuitar(): void
     {
@@ -28,7 +29,7 @@ final class MusicalInstrumentFactoryTest extends \PHPUnit\Framework\TestCase
         $factory = new MusicalInstrumentFactory();
         $eletricGuitar = $factory->createMusicalInstrument(
             MusicalInstrumentFactory::ELECTRIC_GUITAR,
-            'Giannini Model'
+            'Tagima Model'
         );
 
         $eletricGuitar->make();
