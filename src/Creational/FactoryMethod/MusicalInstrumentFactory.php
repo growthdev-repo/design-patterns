@@ -17,9 +17,11 @@ class MusicalInstrumentFactory
     {
         switch ($type) {
             case self::ACOUSTIC_GUITAR:
-                return (new AcousticGuitarFactory())->createMusicalInstrument($brand);
+                return (new AcousticGuitarFactory())
+                    ->createMusicalInstrument($brand);
             case self::ELECTRIC_GUITAR:
-                return (new ElectricGuitarFactory())->createMusicalInstrument($brand);
+                return (new ElectricGuitarFactory())
+                    ->createMusicalInstrument($brand);
             default:
                 throw new \InvalidArgumentException('Invalid musical instrument type');
         }
