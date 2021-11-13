@@ -8,7 +8,7 @@ final class PaymentProcessorWithoutStrategy
 {
     const PAYMENT_TYPE_CREDIT_CARD = 'credit_card';
     const PAYMENT_TYPE_DEBIT_CARD = 'debit_card';
-    const PAYMENT_TYPE_BY_CASH = 'by_cash';
+    const PAYMENT_TYPE_CASH = 'by_cash';
 
     private string $paymentMethod;
     private float $amount;
@@ -29,9 +29,9 @@ final class PaymentProcessorWithoutStrategy
                 $debitCard = new DebitCardPaymentMethod();
                 $this->amount = $debitCard->pay($amount);
                 break;
-            case self::PAYMENT_TYPE_BY_CASH:
-                $byCash = new ByCashPaymentMethod();
-                $this->amount = $byCash->pay($amount);
+            case self::PAYMENT_TYPE_CASH:
+                $cash = new CashPaymentMethod();
+                $this->amount = $cash->pay($amount);
                 break;
             default:
                 throw new \InvalidArgumentException('Invalid payment method');
