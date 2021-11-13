@@ -4,9 +4,6 @@ declare(strict_types=1);
 
 namespace Growthdev\DesignPatterns\Tests\Behavioral\Strategy\Payment;
 
-use Growthdev\DesignPatterns\Behavioral\Strategy\Payment\CashPaymentMethod;
-use Growthdev\DesignPatterns\Behavioral\Strategy\Payment\CreditCardPaymentMethod;
-use Growthdev\DesignPatterns\Behavioral\Strategy\Payment\DebitCardPaymentMethod;
 use Growthdev\DesignPatterns\Behavioral\Strategy\Payment\PaymentProcessorWithoutStrategy;
 use PHPUnit\Framework\TestCase;
 
