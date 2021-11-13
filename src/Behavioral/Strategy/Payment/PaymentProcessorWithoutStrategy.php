@@ -11,6 +11,7 @@ final class PaymentProcessorWithoutStrategy
     const PAYMENT_TYPE_BY_CASH = 'by_cash';
 
     private string $paymentMethod;
+    private float $amount;
 
     public function __construct(string $paymentMethod)
     {
@@ -22,18 +23,23 @@ final class PaymentProcessorWithoutStrategy
         switch ($this->paymentMethod) {
             case self::PAYMENT_TYPE_CREDIT_CARD:
                 $creditCard = new CreditCardPaymentMethod();
-                $creditCard->pay($amount);
+                $this->amount = $creditCard->pay($amount);
                 break;
             case self::PAYMENT_TYPE_DEBIT_CARD:
                 $debitCard = new DebitCardPaymentMethod();
-                $debitCard->pay($amount);
+                $this->amount = $debitCard->pay($amount);
                 break;
             case self::PAYMENT_TYPE_BY_CASH:
                 $byCash = new ByCashPaymentMethod();
-                $byCash->pay($amount);
+                $this->amount = $byCash->pay($amount);
                 break;
             default:
                 throw new \InvalidArgumentException('Invalid payment method');
         }
+    }
+
+    public function getAmount(): float
+    {
+        return $this->amount;
     }
 }

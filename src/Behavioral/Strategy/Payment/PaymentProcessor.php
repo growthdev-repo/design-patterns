@@ -7,6 +7,7 @@ namespace Growthdev\DesignPatterns\Behavioral\Strategy\Payment;
 final class PaymentProcessor
 {
     private PaymentMethodStrategy $paymentMethod;
+    private float $amount;
 
     public function __construct(PaymentMethodStrategy $paymentMethod)
     {
@@ -15,6 +16,11 @@ final class PaymentProcessor
 
     public function processPayment(float $amount): void
     {
-        $this->paymentMethod->pay($amount);
+        $this->amount = $this->paymentMethod->pay($amount);
+    }
+
+    public function getAmount(): float
+    {
+        return $this->amount;
     }
 }

@@ -8,10 +8,8 @@ class CreditCardPaymentMethod implements PaymentMethodStrategy
 {
     private const DISCOUNT_PERCENT = 0.05; // 5%
 
-    public function pay(float $amount): void
+    public function pay(float $amount): float
     {
-        $amount - ($amount * self::DISCOUNT_PERCENT);
-
-        printf('Paid %s with credit card', $amount);
+        return $amount - ($amount * self::DISCOUNT_PERCENT);
     }
 }

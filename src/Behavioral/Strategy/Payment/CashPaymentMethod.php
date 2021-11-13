@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Growthdev\DesignPatterns\Behavioral\Strategy\Payment;
 
-class DebitCardPaymentMethod implements PaymentMethodStrategy
+class CashPaymentMethod implements PaymentMethodStrategy
 {
-    private const DISCOUNT_PERCENT = 0.00;  // 0%
+    private const DISCOUNT_PERCENT = 0.10; // 10%
 
     public function pay(float $amount): float
     {
