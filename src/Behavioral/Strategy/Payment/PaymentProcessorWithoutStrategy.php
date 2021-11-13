@@ -6,9 +6,9 @@ namespace Growthdev\DesignPatterns\Behavioral\Strategy\Payment;
 
 final class PaymentProcessorWithoutStrategy
 {
-    const PAYMENT_TYPE_CREDIT_CARD = 'credit_card';
-    const PAYMENT_TYPE_DEBIT_CARD = 'debit_card';
-    const PAYMENT_TYPE_CASH = 'by_cash';
+    public const PAYMENT_TYPE_CREDIT_CARD = 'credit_card';
+    public const PAYMENT_TYPE_DEBIT_CARD = 'debit_card';
+    public const PAYMENT_TYPE_CASH = 'by_cash';
 
     private string $paymentMethod;
     private float $amount;
