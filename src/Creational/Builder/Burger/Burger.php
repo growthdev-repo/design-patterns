@@ -47,7 +47,7 @@ class Burger
         return $this->patty;
     }
 
-    public function getVeggies(): string
+    public function getveggies(): string
     {
         return $this->veggies;
     }
@@ -60,14 +60,5 @@ class Burger
     public function getWithExtraCheese(): bool
     {
         return $this->withExtraCheese;
-    }
-
-    public function __toString(): string
-    {
-        return "Bread: {$this->getBread()}\n"
-            . "Patty: {$this->getPatty()}\n"
-            . "Veggies: {$this->getVeggies()}\n"
-            . "Sauces: {$this->getSauces()}\n"
-            . "Extra cheese: {$this->getWithExtraCheese()}\n";
     }
 }
