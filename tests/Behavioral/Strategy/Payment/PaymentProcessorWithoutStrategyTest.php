@@ -7,7 +7,7 @@ namespace Growthdev\DesignPatterns\Tests\Behavioral\Strategy\Payment;
 use Growthdev\DesignPatterns\Behavioral\Strategy\Payment\PaymentProcessorWithoutStrategy;
 use PHPUnit\Framework\TestCase;
 
-final class PaymentProcessorTest extends TestCase
+final class PaymentProcessorWithoutStrategyTest extends TestCase
 {
     public function testCanProcessPaymentWithCashPaymentMethod(): void
     {
