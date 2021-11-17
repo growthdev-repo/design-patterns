@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Growthdev\DesignPattern\Creational\AbstractFactory\Products\Piano;
+namespace Growthdev\DesignPatterns\Creational\AbstractFactory\Products\Piano;
 
 abstract class Piano
 {

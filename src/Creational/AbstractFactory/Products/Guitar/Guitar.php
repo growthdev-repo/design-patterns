@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Growthdev\DesignPattern\Creational\AbstractFactory\Products\Guitar;
+namespace Growthdev\DesignPatterns\Creational\AbstractFactory\Products\Guitar;
 
 abstract class Guitar
 {

@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Growthdev\DesignPatterns\Creational\AbstractFactory;
 
-use Growthdev\DesignPattern\Creational\AbstractFactory\Products\Guitar\Guitar;
-use Growthdev\DesignPattern\Creational\AbstractFactory\Products\Guitar\NormalGuitar;
-use Growthdev\DesignPattern\Creational\AbstractFactory\Products\Piano\NormalPiano;
-use Growthdev\DesignPattern\Creational\AbstractFactory\Products\Piano\Piano;
+use Growthdev\DesignPatterns\Creational\AbstractFactory\Products\Guitar\Guitar;
+use Growthdev\DesignPatterns\Creational\AbstractFactory\Products\Guitar\NormalGuitar;
+use Growthdev\DesignPatterns\Creational\AbstractFactory\Products\Piano\NormalPiano;
+use Growthdev\DesignPatterns\Creational\AbstractFactory\Products\Piano\Piano;
 
 class NormalMusicalInstrumentFactory extends MusicalInstrumentFactory
 {
