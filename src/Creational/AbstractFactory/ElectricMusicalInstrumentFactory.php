@@ -11,12 +11,12 @@ use Growthdev\DesignPatterns\Creational\AbstractFactory\Products\Piano\Piano;
 
 class ElectricMusicalInstrumentFactory extends MusicalInstrumentFactory
 {
-    public function createGuitar(string $brand): Guitar
+    public function buildGuitar(string $brand): Guitar
     {
         return new ElectricGuitar($brand);
     }
 
-    public function createPiano(string $brand): Piano
+    public function buildPiano(string $brand): Piano
     {
         return new ElectricPiano($brand);
     }

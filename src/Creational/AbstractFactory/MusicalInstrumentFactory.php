@@ -9,7 +9,7 @@ use Growthdev\DesignPatterns\Creational\AbstractFactory\Products\Piano\Piano;
 
 abstract class MusicalInstrumentFactory
 {
-    abstract public function createGuitar(string $brand): Guitar;
+    abstract public function buildGuitar(string $brand): Guitar;
 
-    abstract public function createPiano(string $brand): Piano;
+    abstract public function buildPiano(string $brand): Piano;
 }
