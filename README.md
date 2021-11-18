@@ -7,11 +7,22 @@ Procurei organizar todos os padrões segundo a sua categoria, separados por past
 Casos você queira se aprofundar no tema, não deixe  de conheceu o site Growth Dev:
 [https://growthdev.com.br](https://growthdev.com.br/)
 
-## Organização do Projeto:
+Disponibilizei diversos artigos sobre Padrões de Proejtos utilizando PHP, onde você pode acessar no meu site: 
+- [Resumo dos Padrões de Projetos (Design Patterns)](https://growthdev.com.br/design-pattern/resumo-dos-padroes-de-projetos-design-patterns/)
+- [Descomplicando os Padrões de Projetos (Design Patterns)](hhttps://growthdev.com.br/design-pattern/descomplicando-os-padroes-de-projetos-design-patterns/)
+
+
+
+## Organização do Projeto linkando para o tutorial:
 
 - `src/`
     - `Behavioral/`
+        - [Padrão de Projeto Strategy em PHP com exemplo](https://growthdev.com.br/design-pattern/padrao-de-projeto-strategy-em-php-com-exemplo/)
     - `Creational/`
+        - [Padrão de Projeto Builder em PHP com exemplo](https://growthdev.com.br/design-pattern/padrao-de-projeto-builder-em-php-com-exemplo/)
+        - [Padrão de Projeto Factory Method em PHP com exemplo](https://growthdev.com.br/design-pattern/padrao-de-projeto-factory-method-em-php-com-exemplo/)
+        - [Padrão de Projeto Singleton em PHP com exemplo](https://growthdev.com.br/design-pattern/padrao-de-projeto-singleton-em-php-com-exemplo/)
+        
     - `Structural/`    
 - `tests/`
     - `Behavioral/`
