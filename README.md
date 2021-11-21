@@ -9,7 +9,7 @@ Casos você queira se aprofundar no tema, não deixe  de conheceu o site Growth 
 
 Disponibilizei diversos artigos sobre Padrões de Proejtos utilizando PHP, onde você pode acessar no meu site: 
 - [Resumo dos Padrões de Projetos (Design Patterns)](https://growthdev.com.br/design-pattern/resumo-dos-padroes-de-projetos-design-patterns/)
-- [Descomplicando os Padrões de Projetos (Design Patterns)](hhttps://growthdev.com.br/design-pattern/descomplicando-os-padroes-de-projetos-design-patterns/)
+- [Descomplicando os Padrões de Projetos (Design Patterns)](https://growthdev.com.br/design-pattern/descomplicando-os-padroes-de-projetos-design-patterns/)
 
 
 
@@ -19,8 +19,11 @@ Disponibilizei diversos artigos sobre Padrões de Proejtos utilizando PHP, onde 
     - `Behavioral/`
         - [Padrão de Projeto Strategy em PHP com exemplo](https://growthdev.com.br/design-pattern/padrao-de-projeto-strategy-em-php-com-exemplo/)
     - `Creational/`
+
+        - [Padrão de Projeto Abstract Factory em PHP com exemplo](https://growthdev.com.br/design-pattern/padrao-de-projeto-abstract-factory-em-php-com-exemplo/)
         - [Padrão de Projeto Builder em PHP com exemplo](https://growthdev.com.br/design-pattern/padrao-de-projeto-builder-em-php-com-exemplo/)
         - [Padrão de Projeto Factory Method em PHP com exemplo](https://growthdev.com.br/design-pattern/padrao-de-projeto-factory-method-em-php-com-exemplo/)
+        - [Padrão de Projeto Prototype em PHP com exemplo](https://growthdev.com.br/design-pattern/padrao-de-projeto-prototype-em-php-com-exemplo/)
         - [Padrão de Projeto Singleton em PHP com exemplo](https://growthdev.com.br/design-pattern/padrao-de-projeto-singleton-em-php-com-exemplo/)
         
     - `Structural/`    
