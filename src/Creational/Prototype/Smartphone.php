@@ -6,13 +6,13 @@ namespace Growthdev\DesignPatterns\Creational\Prototype;
 
 abstract class Smartphone implements Cloneable
 {
-    private string $model;
+    private string $name;
     private float $price;
-    private string $addicionalFeatures;
+    private string $addicionalFeatures = 'none';
 
-    public function setModel(string $model): self
+    public function setName(string $name): self
     {
-        $this->model = $model;
+        $this->name = $name;
 
         return $this;
     }
@@ -31,9 +31,9 @@ abstract class Smartphone implements Cloneable
         return $this;
     }
 
-    public function getModel(): string
+    public function getName(): string
     {
-        return $this->model;
+        return $this->name;
     }
 
     public function getPrice(): float
@@ -46,16 +46,11 @@ abstract class Smartphone implements Cloneable
         return $this->addicionalFeatures;
     }
 
-    public function __clone()
-    {
-        $this->model = $this->model . ' clone';
-    }
-
-    public function __toString(): string
+    public function getModel(): string
     {
         return sprintf(
-            'Model: %s, Price: %.2f, Addicional Features: %s',
-            $this->model,
+            'Model name: %s, Price: %.2f, Addicional Features: %s',
+            $this->name,
             $this->price,
             $this->addicionalFeatures
         );
