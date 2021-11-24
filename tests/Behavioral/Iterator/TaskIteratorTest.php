@@ -11,7 +11,7 @@ use PHPUnit\Framework\TestCase;
 
 final class TaskIteratorTest extends TestCase
 {
-    public function testIterator(): void
+    public function testCanIterateOverTaskList(): void
     {
         $tasks = new ArrayObject();
         $tasks->append(new Task('Task 1'));
