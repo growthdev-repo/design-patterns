@@ -4,19 +4,21 @@ declare(strict_types=1);
 
 namespace Growthdev\DesignPatterns\Behavioral\Command;
 
+use Growthdev\DesignPatterns\Behavioral\Command\Receiver\FileSystem;
+
 final class WriteFileCommand implements Command
 {
-    private FileSystemReceiver $fileSystemReceiver;
+    private FileSystem $fileSystem;
 
     public function __construct(
-        FileSystemReceiver $fileSystemReceiver,
+        FileSystem $fileSystem,
         private string $content
     ) {
-        $this->fileSystemReceiver = $fileSystemReceiver;
+        $this->fileSystem = $fileSystem;
     }
 
     public function execute(): void
     {
-        $this->fileSystemReceiver->writeFile($this->content);
+        $this->fileSystem->writeFile($this->content);
     }
 }
