@@ -10,15 +10,13 @@ final class OpenFileCommand implements Command
 {
     private FileSystem $fileSystem;
 
-    public function __construct(
-        FileSystem $fileSystem,
-        private string $fileName
-    ) {
+    public function __construct(FileSystem $fileSystem)
+    {
         $this->fileSystem = $fileSystem;
     }
 
     public function execute(): void
     {
-        $this->fileSystem->openFile($this->fileName);
+        $this->fileSystem->openFile();
     }
 }
