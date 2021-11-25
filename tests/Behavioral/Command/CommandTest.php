@@ -42,7 +42,9 @@ final class CommandTest extends TestCase
         $invoker = new FileInvoker($writeFile);
         $invoker->execute();
 
-        $this->expectOutputString("Unix file file.sh is writing of the contents: sh unix command");
+        $this->expectOutputString(
+            "Unix file file.sh is writing of the contents: sh unix command"
+        );
     }
 
     public function testCanExecuteCloseFileCommand(): void
