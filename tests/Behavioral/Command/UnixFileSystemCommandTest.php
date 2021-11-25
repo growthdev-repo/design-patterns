@@ -4,27 +4,18 @@ declare(strict_types=1);
 
 namespace Growthdev\DesignPatterns\Tests\Behavioral\Command;
 
-use Growthdev\DesignPatterns\Behavioral\Command\CloseFileCommand;
 use Growthdev\DesignPatterns\Behavioral\Command\FileInvoker;
 use Growthdev\DesignPatterns\Behavioral\Command\OpenFileCommand;
-use Growthdev\DesignPatterns\Behavioral\Command\Receiver\FileSystem;
-use Growthdev\DesignPatterns\Behavioral\Command\Receiver\UnixFileSystem;
-use Growthdev\DesignPatterns\Behavioral\Command\Receiver\WindowsFileSystem;
 use Growthdev\DesignPatterns\Behavioral\Command\WriteFileCommand;
+use Growthdev\DesignPatterns\Behavioral\Command\CloseFileCommand;
+use Growthdev\DesignPatterns\Behavioral\Command\Receiver\UnixFileSystem;
 use PHPUnit\Framework\TestCase;
 
-final class CommandTest extends TestCase
+final class UnixFileSystemCommandTest extends TestCase
 {
-    private static function getFileSystem(): FileSystem
-    {
-        $os = strtoupper(substr(PHP_OS, 0, 3)) === 'LIN';
-
-        return $os ? new UnixFileSystem() : new WindowsFileSystem();
-    }
-
     public function testCanExecuteOpenFileCommand(): void
     {
-        $openFile = new OpenFileCommand(self::getFileSystem());
+        $openFile = new OpenFileCommand(new UnixFileSystem);
         
         $invoker = new FileInvoker($openFile);
         $invoker->execute();
@@ -35,7 +26,7 @@ final class CommandTest extends TestCase
     public function testCanExecuteWrittingFileCommand(): void
     {
         $writeFile = new WriteFileCommand(
-            self::getFileSystem(),
+            new UnixFileSystem,
             'sh unix command'
         );
         
@@ -49,7 +40,7 @@ final class CommandTest extends TestCase
 
     public function testCanExecuteCloseFileCommand(): void
     {
-        $closeFile = new CloseFileCommand(self::getFileSystem());
+        $closeFile = new CloseFileCommand(new UnixFileSystem);
         
         $invoker = new FileInvoker($closeFile);
         $invoker->execute();
