@@ -8,6 +8,5 @@ final class Subscriber
 {
     public function __construct(
         public readonly string $email
-    )
-    {}
+    ) {}
 }
