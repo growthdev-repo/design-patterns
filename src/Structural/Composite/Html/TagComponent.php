@@ -6,13 +6,6 @@ namespace Growthdev\DesignPatterns\Structural\Composite\Html;
 
 abstract class TagComponent
 {
-    private string $name;
-
-    public function __construct(string $name)
-    {
-        $this->name = $name;
-    }
-
     public function add(TagComponent $tagComponent): void
     {
         throw new \BadMethodCallException('Method not implemented');

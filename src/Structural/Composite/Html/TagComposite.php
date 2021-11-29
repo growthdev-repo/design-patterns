@@ -12,7 +12,6 @@ class TagComposite extends TagComponent
 
     public function __construct(private string $name)
     {
-        parent::__construct($name);
         $this->components = new SplObjectStorage();
     }
 

@@ -6,11 +6,11 @@ namespace Growthdev\DesignPatterns\Structural\Composite\Html;
 
 class Tag extends TagComponent
 {
-    public function __construct(
-        private string $name, 
-        private ?string $content = null
-    ) {
-        parent::__construct($name, $content);
+    private string $name;
+
+    public function __construct(string $name, private ?string $content = null) 
+    {
+        $this->name = $name;
     }
 
     public function display(): void
