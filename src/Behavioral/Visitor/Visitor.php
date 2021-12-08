@@ -6,7 +6,7 @@ namespace Growthdev\DesignPatterns\Behavioral\Visitor;
 
 interface Visitor
 {
-    public function visitTag(Tag $tag): void;
+    public function visitHtmlElement(HtmlElement $element): void;
 
-    public function visitTagComposite(TagComposite $tagComposite): void;
+    public function visitHtmlParentElement(HtmlParentElement $parentElement): void;
 }
