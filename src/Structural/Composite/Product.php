@@ -6,8 +6,8 @@ namespace Growthdev\DesignPatterns\Structural\Composite;
 
 final class Product extends CatalogComponent
 {
-    public readonly string $name;
-    public readonly float $price;
+    private string $name;
+    private float $price;
 
     public function __construct(string $name, float $price)
     {
