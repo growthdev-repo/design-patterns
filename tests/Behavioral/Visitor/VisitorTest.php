@@ -4,12 +4,11 @@ declare(strict_types=1);
 
 namespace Growthdev\DesignPatterns\Tests\Behavioral\Visitor;
 
-use Growthdev\DesignPatterns\Behavioral\Visitor\ClassPropertyVisitor;
-use Growthdev\DesignPatterns\Behavioral\Visitor\classVisitor;
+
 use Growthdev\DesignPatterns\Behavioral\Visitor\HtmlElement;
 use Growthdev\DesignPatterns\Behavioral\Visitor\HtmlParentElement;
+use Growthdev\DesignPatterns\Behavioral\Visitor\ClassPropertyVisitor;
 use Growthdev\DesignPatterns\Behavioral\Visitor\StylePropertyVisitor;
-use Growthdev\DesignPatterns\Behavioral\Visitor\StyleVisitor;
 use PHPUnit\Framework\TestCase;
 
 final class VisitorTest extends TestCase
