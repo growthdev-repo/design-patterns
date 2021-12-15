@@ -10,6 +10,11 @@ final class GRUAirTrafficControl implements AirTrafficControl
 {
     private SplObjectStorage $airplane;
 
+    public function __construct()
+    {
+        $this->airplane = new SplObjectStorage();
+    }
+
     public function addAirplane(Airplane $airplane): void
     {
         $this->airplane->attach($airplane);
@@ -17,10 +22,13 @@ final class GRUAirTrafficControl implements AirTrafficControl
 
     public function notifyAirplane(Airplane $airplaneReceiver, string $message): void
     {
-        foreach ($this->airplane as $airplane) {
-            if ($airplaneReceiver !== $airplane) {
-                $airplaneReceiver->receiveMessage($message);
+        while ($this->airplane->valid()) {
+            $airplane = $this->airplane->current();
+            if ($airplane !== $airplaneReceiver) {
+                $airplane->receiveMessage($message);
             }
+            
+            $this->airplane->next();
         }
     }
 }

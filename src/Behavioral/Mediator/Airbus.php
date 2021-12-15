@@ -8,11 +8,11 @@ class Airbus extends Airplane
 {
     public function sendMessage(string $message): void
     {
-        parent::$airTrafficControl->notifyAirplane($this, $message);
+        $this->airTrafficControl->notifyAirplane($this, $message);
     }
 
     public function receiveMessage(string $message): void
     {
-        printf('Airbus received message: %s', $message);
+        $this->message = sprintf("Airbus received message: %s", $message);
     }
 }
