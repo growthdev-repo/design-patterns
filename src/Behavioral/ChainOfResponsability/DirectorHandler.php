@@ -9,7 +9,7 @@ final class DirectorHandler extends ApproveHandler
 {
     public function processSale(Sale $sale): void
     {
-        if ($sale->price >= 30000 && $sale->price < 100000) {
+        if ($sale->price >= 30_000) {
             printf("Sale approved by director with price %.2f\n", $sale->price);
         } else {
             parent::processSale($sale);

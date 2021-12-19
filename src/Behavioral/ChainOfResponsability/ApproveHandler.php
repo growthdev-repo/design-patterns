@@ -6,7 +6,7 @@ namespace Growthdev\DesignPatterns\Behavioral\ChainOfResponsability;
 
 abstract class ApproveHandler implements SaleHandler
 {
-    private ApproveHandler $nextHandler;
+    private ?ApproveHandler $nextHandler = null;
 
     public final function setNext(ApproveHandler $nextHandler): ApproveHandler
     {
