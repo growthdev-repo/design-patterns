@@ -32,10 +32,10 @@ final class ChainOfResponsabilityTest extends TestCase
             ->setNext(new DirectorHandler);
 
         // Request
-        $sale = new Sale(3_000.00);
+        $sale = new Sale(3_999.99);
         $seller->processSale($sale);
 
-        $this->expectOutputString("Sale approved by manager with price 3000.00\n");
+        $this->expectOutputString("Sale approved by manager with price 3999.99\n");
     }
 
     public function testExpectOfApproveByDirector()
