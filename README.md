@@ -18,6 +18,14 @@ Disponibilizei diversos artigos sobre Padrões de Proejtos utilizando PHP, onde 
 - `src/`
     - `Behavioral/`
         - [Padrão de Projeto Strategy em PHP com exemplo](https://growthdev.com.br/design-pattern/padrao-de-projeto-strategy-em-php-com-exemplo/)
+        - [Padrão de Projeto Template Method em PHP com exemplo](https://growthdev.com.br/design-pattern/padrao-de-projeto-template-method-em-php-com-exemplo/)
+        - [Padrão de Projeto Mediator em PHP com exemplo](https://growthdev.com.br/design-pattern/padrao-de-projeto-mediator-em-php-com-exemplo/)
+        - [Padrão de Projeto Iterator em PHP com exemplo](https://growthdev.com.br/design-pattern/padrao-de-projeto-iterator-em-php-com-exemplo/)
+        - [Padrão de Projeto Command em PHP com exemplo](https://growthdev.com.br/design-pattern/padrao-de-projeto-command-em-php-com-exemplo/)
+        - [Padrão de Projeto Chain of Responsability em PHP com exemplo](https://growthdev.com.br/design-pattern/padrao-de-projeto-chain-of-responsability-em-php-com-exemplo/)
+        - [Padrão de Projeto Visitor em PHP com exemplo](https://growthdev.com.br/design-pattern/padrao-de-projeto-visitor-em-php-com-exemplo/)
+        - [Padrão de Projeto Observer em PHP com exemplo](https://growthdev.com.br/design-pattern/padrao-de-projeto-observer-em-php-com-exemplo/)
+
     - `Creational/`
 
         - [Padrão de Projeto Abstract Factory em PHP com exemplo](https://growthdev.com.br/design-pattern/padrao-de-projeto-abstract-factory-em-php-com-exemplo/)
@@ -26,7 +34,9 @@ Disponibilizei diversos artigos sobre Padrões de Proejtos utilizando PHP, onde 
         - [Padrão de Projeto Prototype em PHP com exemplo](https://growthdev.com.br/design-pattern/padrao-de-projeto-prototype-em-php-com-exemplo/)
         - [Padrão de Projeto Singleton em PHP com exemplo](https://growthdev.com.br/design-pattern/padrao-de-projeto-singleton-em-php-com-exemplo/)
         
-    - `Structural/`    
+    - `Structural/`
+        - [Padrão de Projeto Composite em PHP com exemplo](https://growthdev.com.br/design-pattern/padrao-de-projeto-composite-em-php-com-exemplo/)
+        - [Padrão de Projeto Adapter em PHP com exemplo](https://growthdev.com.br/design-pattern/padrao-de-projeto-adapter-em-php-com-exemplo/)
 - `tests/`
     - `Behavioral/`
     - `Creational/`
