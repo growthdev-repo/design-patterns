@@ -20,7 +20,7 @@ class Editor
 
     public function save(): EditorMemento
     {
-        return new EditorMemento($this->content);
+        return new EditorState($this->content);
     }
 
     public function restore(EditorMemento $memento): void

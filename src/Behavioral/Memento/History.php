@@ -4,12 +4,16 @@ declare(strict_types=1);
 
 namespace Growthdev\DesignPatterns\Behavioral\Memento;
 
+use RuntimeException;
 use SplDoublyLinkedList;
 
 //Caretaker
 final class History
 {
-    private SplDoublyLinkedList $states;
+    public function __construct(
+        private SplDoublyLinkedList $states = new SplDoublyLinkedList()
+    ) {
+    }
 
     public function save(EditorMemento $memento): void
     {
@@ -19,10 +23,9 @@ final class History
     public function restore(Editor $editor): void
     {
         if ($this->states->isEmpty()) {
-            throw new \RuntimeException('No states to restore');
+            throw new RuntimeException('No states to restore');
         }
-
-        $memento = $this->states->pop();
-        $editor->restore($memento);
+        $this->states->pop();
+        $editor->restore($this->states->top());
     }
 }
