@@ -8,6 +8,6 @@ class RealInternet implements Internet
 {
     public function connectTo(Site $site): void
     {
-        printf("Connectiing to %s", $site->url);
+        printf("Connected to %s", $site->url);
     }
 }
