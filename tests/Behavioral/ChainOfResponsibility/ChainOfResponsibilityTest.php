@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Growthdev\DesignPatterns\Tests\Behavioral\ChainOfResponsability;
+namespace Growthdev\DesignPatterns\Tests\Behavioral\ChainOfResponsibility;
 
-use Growthdev\DesignPatterns\Behavioral\ChainOfResponsability\DirectorHandler;
-use Growthdev\DesignPatterns\Behavioral\ChainOfResponsability\ManagerHandler;
-use Growthdev\DesignPatterns\Behavioral\ChainOfResponsability\Sale;
-use Growthdev\DesignPatterns\Behavioral\ChainOfResponsability\SellerHandler;
+use Growthdev\DesignPatterns\Behavioral\ChainOfResponsibility\DirectorHandler;
+use Growthdev\DesignPatterns\Behavioral\ChainOfResponsibility\ManagerHandler;
+use Growthdev\DesignPatterns\Behavioral\ChainOfResponsibility\Sale;
+use Growthdev\DesignPatterns\Behavioral\ChainOfResponsibility\SellerHandler;
 use PHPUnit\Framework\TestCase;
 
-final class ChainOfResponsabilityTest extends TestCase
+final class ChainOfResponsibilityTest extends TestCase
 {
     public function testExpectOfApproveBySeller()
     {

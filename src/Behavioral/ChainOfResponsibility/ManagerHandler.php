@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Growthdev\DesignPatterns\Behavioral\ChainOfResponsability;
+namespace Growthdev\DesignPatterns\Behavioral\ChainOfResponsibility;
 
 // gerente
 final class ManagerHandler extends ApproveHandler
