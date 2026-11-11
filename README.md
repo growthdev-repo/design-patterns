@@ -25,6 +25,7 @@ Disponibilizei diversos artigos sobre Padrões de Projetos utilizando PHP, onde 
         - [Padrão de Projeto Chain of Responsibility em PHP com exemplo](https://growthcode.com.br/design-pattern/padrao-de-projeto-chain-of-responsability-em-php-com-exemplo/)
         - [Padrão de Projeto Visitor em PHP com exemplo](https://growthcode.com.br/design-pattern/padrao-de-projeto-visitor-em-php-com-exemplo/)
         - [Padrão de Projeto Observer em PHP com exemplo](https://growthcode.com.br/design-pattern/padrao-de-projeto-observer-em-php-com-exemplo/)
+        - [Padrão de Projeto Memento em PHP com exemplo](https://growthcode.com.br/design-pattern/padrao-de-projeto-memento-em-php-com-exemplo/)
 
     - `Creational/`
 
@@ -37,6 +38,9 @@ Disponibilizei diversos artigos sobre Padrões de Projetos utilizando PHP, onde 
     - `Structural/`
         - [Padrão de Projeto Composite em PHP com exemplo](https://growthcode.com.br/design-pattern/padrao-de-projeto-composite-em-php-com-exemplo/)
         - [Padrão de Projeto Adapter em PHP com exemplo](https://growthcode.com.br/design-pattern/padrao-de-projeto-adapter-em-php-com-exemplo/)
+        - [Padrão de Projeto Proxy em PHP com exemplo](https://growthcode.com.br/design-pattern/padrao-de-projeto-proxy-em-php-com-exemplo/)
+        - [Padrão de Projeto Decorator em PHP com exemplo](https://growthcode.com.br/design-pattern/padrao-de-projeto-decorator-em-php-com-exemplo/)
+        - [Padrão de Projeto Facade em PHP com exemplo](https://growthcode.com.br/design-pattern/padrao-de-projeto-facade-em-php-com-exemplo/)
 - `tests/`
     - `Behavioral/`
     - `Creational/`
