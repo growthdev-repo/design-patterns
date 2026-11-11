@@ -42,6 +42,7 @@ Disponibilizei diversos artigos sobre Padrões de Projetos utilizando PHP, onde 
         - [Padrão de Projeto Proxy em PHP com exemplo](https://growthcode.com.br/design-pattern/padrao-de-projeto-proxy-em-php-com-exemplo/)
         - [Padrão de Projeto Decorator em PHP com exemplo](https://growthcode.com.br/design-pattern/padrao-de-projeto-decorator-em-php-com-exemplo/)
         - [Padrão de Projeto Facade em PHP com exemplo](https://growthcode.com.br/design-pattern/padrao-de-projeto-facade-em-php-com-exemplo/)
+        - [Padrão de Projeto Bridge em PHP com exemplo](https://growthcode.com.br/design-pattern/padrao-de-projeto-bridge-em-php-com-exemplo/)
 - `tests/`
     - `Behavioral/`
     - `Creational/`
